@@ -16,3 +16,21 @@ Install the gem:
 bundle install
 ```
 
+Add the Javascript to `application.js`:
+
+
+```javascript
+//=require js/storyjs-embed
+```
+
+## Example
+
+```javascript
+  $(document).ready(function() {
+      type: 'timeline',
+      width: '400',
+      height: '500',
+      source: '/events.json',
+      embed_id: 'time_line'      
+  });
+```
