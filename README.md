@@ -27,10 +27,12 @@ Add the Javascript to `application.js`:
 
 ```javascript
   $(document).ready(function() {
+    createStoryJS({
       type: 'timeline',
       width: '400',
       height: '500',
       source: '/events.json',
-      embed_id: 'time_line'      
+      embed_id: 'time_line'
+    });
   });
 ```
