@@ -36,3 +36,41 @@ Add the Javascript to `application.js`:
     });
   });
 ```
+
+In the production environment and enable Rails asset pipleine, you need to do below:
+
+Add the Javascript to `application.js`:
+
+
+```javascript
+//=require js/timeline-min
+//=require js/locale/zh-ch
+```
+
+Add the css to `application.css`:
+
+```css
+/*
+ *= require css/timeline
+ */  
+````
+
+Init the timeline:
+
+
+```javascript
+  $(document).ready(function() {
+    createStoryJS({
+      type: 'timeline',
+      width: '400',
+      height: '500',
+      source: '/events.json',      
+      embed_id: 'time_line',
+      lang: '/assets/application.js'
+      js: '/assets/application.js'
+      css: '/assets/application.css'      
+    });
+  });
+```
+
+
