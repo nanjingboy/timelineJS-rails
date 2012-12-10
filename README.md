@@ -31,6 +31,7 @@ Add the Javascript to `application.js`:
       type: 'timeline',
       width: '400',
       height: '500',
+      lang: 'zh-ch',
       source: '/events.json',
       embed_id: 'time_line'
     });
