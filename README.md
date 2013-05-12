@@ -67,8 +67,8 @@ Init the timeline:
       height: '500',
       source: '/events.json',      
       embed_id: 'time_line',
-      lang: '/assets/application.js'
-      js: '/assets/application.js'
+      lang: '/assets/application.js',
+      js: '/assets/application.js',
       css: '/assets/application.css'      
     });
   });
