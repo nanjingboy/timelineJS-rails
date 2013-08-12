@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Bree Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bree Serif'), local('BreeSerif-Regular'), url(http://themes.googleusercontent.com/static/fonts/breeserif/v2/LQ7WLTaITDg4OSRuOZCpsxsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-hnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxh_xHqYgAV9Bl_ZQbYUxnQU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/xjAJXh38I15wypJXxuGMBobN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxn5HxGBcBvicCpTp6spHfNo.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxjqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 800;
+  src: local('Open Sans Extrabold Italic'), local('OpenSans-ExtraboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxkCDe67GEgBv_HnyvHTfdew.woff) format('woff');
+}
+
+.vco-storyjs{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;}.vco-storyjs .twitter,.vco-storyjs .vcard,.vco-storyjs .messege,.vco-storyjs .credit,.vco-storyjs .caption,.vco-storyjs .zoom-in,.vco-storyjs .zoom-out,.vco-storyjs .back-home,.vco-storyjs .time-interval div,.vco-storyjs .time-interval-major div,.vco-storyjs .nav-container{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif !important;}
+.vco-storyjs .vco-feature h1.date,.vco-storyjs .vco-feature h2.date,.vco-storyjs .vco-feature h3.date,.vco-storyjs .vco-feature h4.date,.vco-storyjs .vco-feature h5.date,.vco-storyjs .vco-feature h6.date{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif !important;}
+.vco-storyjs .timenav h1,.vco-storyjs .flag-content h1,.vco-storyjs .era h1,.vco-storyjs .timenav h2,.vco-storyjs .flag-content h2,.vco-storyjs .era h2,.vco-storyjs .timenav h3,.vco-storyjs .flag-content h3,.vco-storyjs .era h3,.vco-storyjs .timenav h4,.vco-storyjs .flag-content h4,.vco-storyjs .era h4,.vco-storyjs .timenav h5,.vco-storyjs .flag-content h5,.vco-storyjs .era h5,.vco-storyjs .timenav h6,.vco-storyjs .flag-content h6,.vco-storyjs .era h6{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif !important;}
+.vco-storyjs p,.vco-storyjs blockquote,.vco-storyjs blockquote p,.vco-storyjs .twitter blockquote p{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif !important;}
+.vco-storyjs .vco-feature h1,.vco-storyjs .vco-feature h2,.vco-storyjs .vco-feature h3,.vco-storyjs .vco-feature h4,.vco-storyjs .vco-feature h5,.vco-storyjs .vco-feature h6{font-family:'Bree Serif',Georgia,serif;}
+.timeline-tooltip{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;}

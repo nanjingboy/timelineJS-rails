@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Muli Light'), local('Muli-Light'), url(http://themes.googleusercontent.com/static/fonts/muli/v4/_fUwxgthNvUM9WCtMyMvbA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Muli'), url(http://themes.googleusercontent.com/static/fonts/muli/v4/kU4XYdV4jtS72BIidPtqyw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Muli Light Italic'), local('Muli-LightItalic'), url(http://themes.googleusercontent.com/static/fonts/muli/v4/Q5N_zd0042xOVES9NXt9Qj8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Muli Italic'), local('Muli-Italic'), url(http://themes.googleusercontent.com/static/fonts/muli/v4/9pglA9mmygCxuxvISUrc-g.woff) format('woff');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playfair Display'), local('PlayfairDisplay-Regular'), url(http://themes.googleusercontent.com/static/fonts/playfairdisplay/v7/2NBgzUtEeyB-Xtpr9bm1CZa6Tn9fxpDPuRSK4Gn5Ybw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url(http://themes.googleusercontent.com/static/fonts/playfairdisplay/v7/9MkijrV-dEJ0-_NWV7E6N3aqFElqJjV-H5EUExnZgmU.woff) format('woff');
+}
+
+.vco-storyjs{font-family:'Muli',sans-serif;}.vco-storyjs .twitter,.vco-storyjs .vcard,.vco-storyjs .messege,.vco-storyjs .credit,.vco-storyjs .caption,.vco-storyjs .zoom-in,.vco-storyjs .zoom-out,.vco-storyjs .back-home,.vco-storyjs .time-interval div,.vco-storyjs .time-interval-major div,.vco-storyjs .nav-container{font-family:'Muli',sans-serif !important;}
+.vco-storyjs .vco-feature h1.date,.vco-storyjs .vco-feature h2.date,.vco-storyjs .vco-feature h3.date,.vco-storyjs .vco-feature h4.date,.vco-storyjs .vco-feature h5.date,.vco-storyjs .vco-feature h6.date{font-family:'Muli',sans-serif !important;}
+.vco-storyjs .timenav h1,.vco-storyjs .flag-content h1,.vco-storyjs .era h1,.vco-storyjs .timenav h2,.vco-storyjs .flag-content h2,.vco-storyjs .era h2,.vco-storyjs .timenav h3,.vco-storyjs .flag-content h3,.vco-storyjs .era h3,.vco-storyjs .timenav h4,.vco-storyjs .flag-content h4,.vco-storyjs .era h4,.vco-storyjs .timenav h5,.vco-storyjs .flag-content h5,.vco-storyjs .era h5,.vco-storyjs .timenav h6,.vco-storyjs .flag-content h6,.vco-storyjs .era h6{font-family:'Muli',sans-serif !important;}
+.vco-storyjs p,.vco-storyjs blockquote,.vco-storyjs blockquote p,.vco-storyjs .twitter blockquote p{font-family:'Muli',sans-serif !important;}
+.vco-storyjs .vco-feature h1,.vco-storyjs .vco-feature h2,.vco-storyjs .vco-feature h3,.vco-storyjs .vco-feature h4,.vco-storyjs .vco-feature h5,.vco-storyjs .vco-feature h6{font-family:'Playfair Display',serif;}
+.timeline-tooltip{font-family:'Muli',sans-serif;}
