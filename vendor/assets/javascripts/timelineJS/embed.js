@@ -21,37 +21,38 @@ function createStoryJS(c, src) {
 				flickr:	"",
 				twitter: ""
 			},
-			gmap_key: ""
+			gmap_key: "",
+            ajax_timeout: 3000
 		};
-	
+
 	/* Build Timeline
 	================================================== */
 	function createEmbedDiv() {
 		var embed_classname	= "storyjs-embed";
-		
+
 		t = document.createElement('div');
-		
+
 		if (storyjs_e_config.embed_id != "") {
 			te = document.getElementById(storyjs_e_config.embed_id);
 		} else {
 			te = document.getElementById("timeline-embed");
 		}
-		
+
 		te.appendChild(t);
 		t.setAttribute("id", storyjs_e_config.id);
-		
+
 		if (storyjs_e_config.width.toString().match("%") ) {
 			te.style.width = storyjs_e_config.width.split("%")[0] + "%";
 		} else {
 			storyjs_e_config.width = storyjs_e_config.width - 2;
 			te.style.width = (storyjs_e_config.width) + 'px';
 		}
-		
+
 		if (storyjs_e_config.height.toString().match("%")) {
 			te.style.height = storyjs_e_config.height;
 			embed_classname	+= " full-embed";
 			te.style.height = storyjs_e_config.height.split("%")[0] + "%";
-			
+
 		} else if (storyjs_e_config.width.toString().match("%")) {
 			embed_classname	+= " full-embed";
 			storyjs_e_config.height = storyjs_e_config.height - 16;
@@ -61,12 +62,12 @@ function createStoryJS(c, src) {
 			storyjs_e_config.height = storyjs_e_config.height - 16;
 			te.style.height = (storyjs_e_config.height) + 'px';
 		}
-		
+
 		te.setAttribute("class", embed_classname);
-		te.setAttribute("className", embed_classname); 
+		te.setAttribute("className", embed_classname);
 		t.style.position = 'relative';
 	}
-	
+
 	function buildEmbed() {
 		VMM.debug = storyjs_e_config.debug;
 		storyjs_embedjs = new VMM.Timeline(storyjs_e_config.id);
@@ -77,7 +78,7 @@ function createStoryJS(c, src) {
 	}
 
 	/* BUILD CONFIG
-	================================================== */	
+	================================================== */
 	if (typeof c == 'object') {
 		for (x in c) {
 			if (Object.prototype.hasOwnProperty.call(c, x)) {
@@ -85,26 +86,26 @@ function createStoryJS(c, src) {
 			}
 		}
 	}
-		
+
 	if (typeof src != 'undefined') {
 		storyjs_e_config.source = src;
 	}
-		
+
 	/* CDN VERSION?
 	================================================== */
 	if (typeof url_config == 'object') {
 		isCDN = true;
-			
+
 		/* IS THE SOURCE GOOGLE SPREADSHEET WITH JUST THE KEY?
 		================================================== */
 		if (storyjs_e_config.source.match("docs.google.com") || storyjs_e_config.source.match("json") || storyjs_e_config.source.match("storify") ) {
-				
+
 		} else {
 			storyjs_e_config.source = "https://docs.google.com/spreadsheet/pub?key=" + storyjs_e_config.source + "&output=html";
 		}
-			
+
 	}
-		
+
 	createEmbedDiv();
-	buildEmbed();		
+	buildEmbed();
 }
