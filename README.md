@@ -4,6 +4,8 @@ This gem packages the [TimelineJS](http://timeline.verite.co/) for easy use with
 
 ## General Installation
 
+Version Bump Running  2.27.0 now
+
 Add to the assets group in your Gemfile:
 
 ```ruby
@@ -11,7 +13,7 @@ gem 'timelineJS-rails', '~> 1.1.1'
 ```
 
 Install the gem:
-  
+
 ```ruby
 bundle install
 ```
@@ -125,7 +127,7 @@ If you want to set the font theme, just add the CSS to `application.css`:
 ```
 
 ## Thanks
->- [TimelineJS](https://github.com/VeriteCo/TimelineJS)
+>- [TimelineJS](https://github.com/NUKnightLab/TimelineJS)
 
 ## License
 [www.opensource.org/licenses/MIT](http://www.opensource.org/licenses/MIT)
