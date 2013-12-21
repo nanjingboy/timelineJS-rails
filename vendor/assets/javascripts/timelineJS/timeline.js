@@ -2873,7 +2873,7 @@ if(typeof VMM != 'undefined' && typeof VMM.ExternalAPI == 'undefined') {
 					twit += "<a class='screen-name url' href='https://twitter.com/" + d.user.screen_name + "' data-screen-name='" + d.user.screen_name + "' target='_blank'>";
 					twit += "<span class='avatar'><img src=' " + d.user.profile_image_url + "'  alt=''></span>";
 					twit += "<span class='fn'>" + d.user.name + "</span>";
-					twit += "<span class='nickname'>@" + d.user.screen_name + "<span class='thumbnail-inline'></span></span>";
+					twit += "<span class='nickname'>@" + d.user.screen_name + "<span class='timeline-thumbnail-inline'></span></span>";
 					twit += "</a>";
 					twit += "</div>";
 
@@ -2951,7 +2951,7 @@ if(typeof VMM != 'undefined' && typeof VMM.ExternalAPI == 'undefined') {
 					twit += "<a class='screen-name url' href='" + d.author_url + "' target='_blank'>";
 					twit += "<span class='avatar'></span>";
 					twit += "<span class='fn'>" + d.author_name + "</span>";
-					twit += "<span class='nickname'>@" + tuser + "<span class='thumbnail-inline'></span></span>";
+					twit += "<span class='nickname'>@" + tuser + "<span class='timeline-thumbnail-inline'></span></span>";
 					twit += "</a>";
 					twit += "</div>";
 
@@ -3126,7 +3126,7 @@ if(typeof VMM != 'undefined' && typeof VMM.ExternalAPI == 'undefined') {
 				twit += "<a class='screen-name url' href='https://twitter.com/" + d.user.screen_name + "' data-screen-name='" + d.user.screen_name + "' target='_blank'>";
 				twit += "<span class='avatar'><img src=' " + d.user.profile_image_url + "'  alt=''></span>";
 				twit += "<span class='fn'>" + d.user.name + "</span>";
-				twit += "<span class='nickname'>@" + d.user.screen_name + "<span class='thumbnail-inline'></span></span>";
+				twit += "<span class='nickname'>@" + d.user.screen_name + "<span class='timeline-thumbnail-inline'></span></span>";
 				twit += "</a>";
 				twit += "</div>";
 
@@ -3796,7 +3796,7 @@ if(typeof VMM != 'undefined' && typeof VMM.ExternalAPI == 'undefined') {
 								mediaElem		+=	"<div class='vcard author'><a class='screen-name url' href='" + a_data.url + "' target='_blank'>";
 								mediaElem		+=	"<span class='avatar'><img src='" + a_data.actor.image.url + "' style='max-width: 32px; max-height: 32px;'></span>"
 								mediaElem		+=	"<span class='fn'>" + a_data.actor.displayName + "</span>";
-								mediaElem		+=	"<span class='nickname'><span class='thumbnail-inline'></span></span>";
+								mediaElem		+=	"<span class='nickname'><span class='timeline-thumbnail-inline'></span></span>";
 								mediaElem		+=	"</a></div>";
 
 								VMM.attachElement("#googleplus_" + gplus.activity, mediaElem);
@@ -4182,7 +4182,7 @@ if(typeof VMM != 'undefined' && typeof VMM.ExternalAPI == 'undefined') {
 				trace(m);
 				if (typeof d.data != 'undefined') {
 					var thumb_id = "#" + m.uid + "_thumb";
-					VMM.attachElement(thumb_id, "<img src='" + d.data.thumbnail.sqDefault + "'>");
+					VMM.attachElement(thumb_id, "<img src='" + d.data.timeline-thumbnail.sqDefault + "'>");
 
 				}
 			},
@@ -4260,7 +4260,7 @@ if(typeof VMM != 'undefined' && typeof VMM.ExternalAPI == 'undefined') {
 			createThumb: function(d, m) {
 				trace("VIMEO CREATE THUMB");
 				var thumb_id = "#" + m.uid + "_thumb";
-				VMM.attachElement(thumb_id, "<img src='" + d[0].thumbnail_small + "'>");
+				VMM.attachElement(thumb_id, "<img src='" + d[0].timeline-thumbnail_small + "'>");
 			},
 
 			pushQue: function() {
@@ -4373,7 +4373,7 @@ if(typeof VMM != 'undefined' && typeof VMM.MediaElement == 'undefined') {
 			return "<div class='vco-loading'><div class='vco-loading-container'><div class='vco-loading-icon'></div>" + "<div class='vco-message'><p>" + m + "</p></div></div></div>";
 		},
 
-		thumbnail: function(data, w, h, uid) {
+		timeline-thumbnail: function(data, w, h, uid) {
 			var _w		= 16,
 				_h		= 24,
 				_uid	= "";
@@ -4388,73 +4388,73 @@ if(typeof VMM != 'undefined' && typeof VMM.MediaElement == 'undefined') {
 					m			= VMM.MediaType(data.media); //returns an object with .type and .id
 
 				// DETERMINE THUMBNAIL OR ICON
-				if (data.thumbnail != null && data.thumbnail != "") {
+				if (data.timeline-thumbnail != null && data.timeline-thumbnail != "") {
 					trace("CUSTOM THUMB");
-					mediaElem		=	"<div class='thumbnail thumb-custom' id='" + uid + "_custom_thumb'><img src='" + data.thumbnail + "'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-custom' id='" + uid + "_custom_thumb'><img src='" + data.timeline-thumbnail + "'></div>";
 					return mediaElem;
 				} else if (m.type == "image") {
-					mediaElem		=	"<div class='thumbnail thumb-photo'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-photo'></div>";
 					return mediaElem;
 				} else if (m.type	==	"flickr") {
-					mediaElem		=	"<div class='thumbnail thumb-photo' id='" + uid + "_thumb'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-photo' id='" + uid + "_thumb'></div>";
 					return mediaElem;
 				} else if (m.type	==	"instagram") {
-					mediaElem		=	"<div class='thumbnail thumb-instagram' id='" + uid + "_thumb'><img src='" + VMM.ExternalAPI.instagram.get(m.id, true) + "'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-instagram' id='" + uid + "_thumb'><img src='" + VMM.ExternalAPI.instagram.get(m.id, true) + "'></div>";
 					return mediaElem;
 				} else if (m.type	==	"youtube") {
-					mediaElem		=	"<div class='thumbnail thumb-youtube' id='" + uid + "_thumb'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-youtube' id='" + uid + "_thumb'></div>";
 					return mediaElem;
 				} else if (m.type	==	"googledoc") {
-					mediaElem		=	"<div class='thumbnail thumb-document'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-document'></div>";
 					return mediaElem;
 				} else if (m.type	==	"vimeo") {
-					mediaElem		=	"<div class='thumbnail thumb-vimeo' id='" + uid + "_thumb'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-vimeo' id='" + uid + "_thumb'></div>";
 					return mediaElem;
 				} else if (m.type  ==  "vine") {
-					mediaElem		=  "<div class='thumbnail thumb-vine'></div>";
+					mediaElem		=  "<div class='timeline-thumbnail thumb-vine'></div>";
 					return mediaElem;
 				} else if (m.type  ==  "dailymotion") {
-					mediaElem		=  "<div class='thumbnail thumb-video'></div>";
+					mediaElem		=  "<div class='timeline-thumbnail thumb-video'></div>";
 					return mediaElem;
 				} else if (m.type	==	"twitter"){
-					mediaElem		=	"<div class='thumbnail thumb-twitter'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-twitter'></div>";
 					return mediaElem;
 				} else if (m.type	==	"twitter-ready") {
-					mediaElem		=	"<div class='thumbnail thumb-twitter'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-twitter'></div>";
 					return mediaElem;
 				} else if (m.type	==	"soundcloud") {
-					mediaElem		=	"<div class='thumbnail thumb-audio'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-audio'></div>";
 					return mediaElem;
 				} else if (m.type	==	"google-map") {
-					mediaElem		=	"<div class='thumbnail thumb-map'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-map'></div>";
 					return mediaElem;
 				} else if (m.type		==	"googleplus") {
-					mediaElem		=	"<div class='thumbnail thumb-googleplus'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-googleplus'></div>";
 					return mediaElem;
 				} else if (m.type	==	"wikipedia") {
-					mediaElem		=	"<div class='thumbnail thumb-wikipedia'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-wikipedia'></div>";
 					return mediaElem;
 				} else if (m.type	==	"storify") {
-					mediaElem		=	"<div class='thumbnail thumb-storify'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-storify'></div>";
 					return mediaElem;
 				} else if (m.type	==	"quote") {
-					mediaElem		=	"<div class='thumbnail thumb-quote'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-quote'></div>";
 					return mediaElem;
 				} else if (m.type	==	"iframe") {
-					mediaElem		=	"<div class='thumbnail thumb-video'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-video'></div>";
 					return mediaElem;
 				} else if (m.type	==	"unknown") {
 					if (m.id.match("blockquote")) {
-						mediaElem	=	"<div class='thumbnail thumb-quote'></div>";
+						mediaElem	=	"<div class='timeline-thumbnail thumb-quote'></div>";
 					} else {
-						mediaElem	=	"<div class='thumbnail thumb-plaintext'></div>";
+						mediaElem	=	"<div class='timeline-thumbnail thumb-plaintext'></div>";
 					}
 					return mediaElem;
 				} else if (m.type	==	"website") {
-					mediaElem		=	"<div class='thumbnail thumb-website' id='" + uid + "_thumb'></div>";
+					mediaElem		=	"<div class='timeline-thumbnail thumb-website' id='" + uid + "_thumb'></div>";
 					return mediaElem;
 				} else {
-					mediaElem = "<div class='thumbnail thumb-plaintext'></div>";
+					mediaElem = "<div class='timeline-thumbnail thumb-plaintext'></div>";
 					return mediaElem;
 				}
 			}
@@ -9076,7 +9076,7 @@ if(typeof VMM.Timeline != 'undefined' && typeof VMM.Timeline.TimeNav == 'undefin
 
 				// THUMBNAIL
 				if (data[i].asset != null && data[i].asset != "") {
-					VMM.appendElement(_marker_content, VMM.MediaElement.thumbnail(data[i].asset, 24, 24, data[i].uniqueid));
+					VMM.appendElement(_marker_content, VMM.MediaElement.timeline-thumbnail(data[i].asset, 24, 24, data[i].uniqueid));
 				} else {
 					VMM.appendElement(_marker_content, "<div style='margin-right:7px;height:50px;width:2px;float:left;'></div>");
 				}
@@ -9511,7 +9511,7 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 											media:		getGVar(dd.gsx$media),
 											credit:		getGVar(dd.gsx$mediacredit),
 											caption:	getGVar(dd.gsx$mediacaption),
-											thumbnail:	getGVar(dd.gsx$mediathumbnail)
+											timeline-thumbnail:	getGVar(dd.gsx$mediatimeline-thumbnail)
 										}
 								};
 
@@ -9612,7 +9612,7 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 									media:		"",
 									credit:		"",
 									caption:	"",
-									thumbnail:	""
+									timeline-thumbnail:	""
 								}
 							};
 							list.push(date);
@@ -9648,7 +9648,7 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 								} else if (cell.content == "Media Caption") {
 									column_name = "caption";
 								} else if (cell.content == "Media Thumbnail") {
-									column_name = "thumbnail";
+									column_name = "timeline-thumbnail";
 								} else if (cell.content == "Type") {
 									column_name = "type";
 								} else if (cell.content == "Tag") {
@@ -9698,7 +9698,7 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 												media:		date.media,
 												credit:		date.credit,
 												caption:	date.caption,
-												thumbnail:	date.thumbnail
+												timeline-thumbnail:	date.timeline-thumbnail
 											}
 									};
 
@@ -9778,7 +9778,7 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 
 					tt				+=	"<span class='avatar'><img src='" + d.content.author.avatar + "' style='max-width: 32px; max-height: 32px;'></span>"
 					tt				+=	"<span class='fn'>" + t_name + "</span>";
-					tt				+=	"<span class='nickname'>" + t_nickname + "<span class='thumbnail-inline'></span></span>";
+					tt				+=	"<span class='nickname'>" + t_nickname + "<span class='timeline-thumbnail-inline'></span></span>";
 					tt				+=	"</a>";
 					//tt				+=	"<span class='nickname'>" + d.content.author.stats.stories + " Stories</span>";
 					//tt				+=	"<span class='nickname'>" + d.content.author.stats.subscribers + " Subscribers</span>";
@@ -9786,7 +9786,7 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 					tt				+=	"</div>";
 
 					_data_obj.timeline.text = tt;
-					_data_obj.timeline.asset.media = d.content.thumbnail;
+					_data_obj.timeline.asset.media = d.content.timeline-thumbnail;
 
 					//_data_obj.timeline.asset.media = 		dd.gsx$media.$t;
 					//_data_obj.timeline.asset.caption = 		dd.gsx$mediacaption.$t;
@@ -9860,8 +9860,8 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 						} else if (dd.type == "link") {
 							_date.headline		=	dd.data.link.title;
 							_date.text			=	dd.data.link.description;
-							if (dd.data.link.thumbnail != 'undefined' && dd.data.link.thumbnail != '') {
-								_date.asset.media	=	dd.data.link.thumbnail;
+							if (dd.data.link.timeline-thumbnail != 'undefined' && dd.data.link.timeline-thumbnail != '') {
+								_date.asset.media	=	dd.data.link.timeline-thumbnail;
 							} else {
 								_date.asset.media	=	dd.permalink;
 							}
@@ -9884,9 +9884,9 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 								//asset_text		+=	" <a href='" + dd.attribution.href + "' target='_blank' alt='link to author' title='link to author'>" + "<span class='created-at'></span>" + " </a>";
 
 								asset_text		+=	"<div class='vcard author'><a class='screen-name url' href='" + dd.attribution.href + "' target='_blank'>";
-								asset_text		+=	"<span class='avatar'><img src='" + dd.attribution.thumbnail + "' style='max-width: 32px; max-height: 32px;'></span>"
+								asset_text		+=	"<span class='avatar'><img src='" + dd.attribution.timeline-thumbnail + "' style='max-width: 32px; max-height: 32px;'></span>"
 								asset_text		+=	"<span class='fn'>" + t_name + "</span>";
-								asset_text		+=	"<span class='nickname'>" + t_nickname + "<span class='thumbnail-inline'></span></span>";
+								asset_text		+=	"<span class='nickname'>" + t_nickname + "<span class='timeline-thumbnail-inline'></span></span>";
 								asset_text		+=	"</a></div></div>";
 								_date.text		=	asset_text;
 
