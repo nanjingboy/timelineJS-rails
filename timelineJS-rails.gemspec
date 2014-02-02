@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version = TimelineJS::Rails::VERSION
   s.authors = ['Tom Huang']
   s.email = ['hzlhu.dargon@gmail.com']
-  s.homepage = 'https://github.com/NanJingBoy/timelineJS-rails'
+  s.homepage = 'https://github.com/nanjingboy/timelineJS-rails'
   s.summary = 'timelineJS packaged for the Rails asset pieline'
   s.description = "timelineJS resources files packaged for the Rails asset pieline"
 

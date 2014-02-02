@@ -1,5 +1,5 @@
 module TimelineJS
   module Rails
-    VERSION = '1.1.3'
+    VERSION = '1.1.5'
   end
 end

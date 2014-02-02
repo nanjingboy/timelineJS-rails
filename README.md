@@ -7,11 +7,11 @@ This gem packages the [TimelineJS](http://timeline.verite.co/) for easy use with
 Add to the assets group in your Gemfile:
 
 ```ruby
-gem 'timelineJS-rails', '~> 1.1.1'
+gem 'timelineJS-rails', '~> 1.1.5'
 ```
 
 Install the gem:
-  
+
 ```ruby
 bundle install
 ```
